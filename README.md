@@ -1,24 +1,53 @@
-# pokedex
+# Simplified Pokedex
 
-## Project setup
-```
-npm install
-```
+Simplified Pokedex is a web application that allows users to explore information about Pokémon from various generations. You can view details about each Pokémon, including their statistics, abilities, and types.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![Pokedex Screenshot](./screenshot.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Features
 
-### Lints and fixes files
-```
-npm run lint
-```
+- View a list of Pokémon from various generations.
+- Click on a Pokémon to get detailed information.
+- Filter Pokémon by generation.
+- Search for Pokémon by name.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Technologies Used
+
+- Vue.js: JavaScript framework for building the user interface.
+- Vuetify: Vue component library for responsive design.
+- PokeAPI: API that provides data about Pokémon.
+
+## Installation
+
+1. Clone the repository:
+
+   git clone https://github.com/your-username/simplified-pokedex.git
+
+   cd simplified-pokedex
+
+2. Install dependencies:
+
+    npm install
+
+3. Start the development server:
+
+    npm run serve
+
+4. Open the application in your browser at http://localhost:8080.
+
+## Usage
+
+- Open the application in your browser.
+- Explore the list of Pokémon.
+- Click on a Pokémon to view more information.
+- Use the search bar to find Pokémon by name.
+- Filter Pokémon by generation using the sidebar menu.
+
+## Contribution
+
+Contributions are welcome! If you find an issue, have a suggestion, or would like to contribute in any way, please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Developed by Ericky Figueiredo and based on the project at NEPS Academy.".

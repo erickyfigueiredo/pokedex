@@ -1,24 +1,24 @@
 <template>
-    <v-container fluid>
-        <v-row>
-            <v-col cols="12" class="d-flex align-center">
-                <img src="@/assets/pokedex.png" alt="Pokedex" class="pokedex-image">
-                <label class="white--text text-center">SIMPLIFIED POKEDEX</label>
-            </v-col>
-            <v-col cols="12">
-                <v-list class="background-poke">
-                    <v-list-item class="ml-7" v-for="selectGeneration in generation" :key="selectGeneration.id" @click="get_all(selectGeneration)" :flat="flat">
-                        <v-list-item-action>
-                            <v-icon color="white">mdi-pokeball</v-icon>
-                        </v-list-item-action>
-                        <v-list-item-content>
-                            <v-list-item-title class="white--text">{{ selectGeneration.name }}</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-list>
-            </v-col>
-        </v-row>
-    </v-container>
+<v-container fluid>
+    <v-row>
+        <v-col cols="12" class="d-flex align-center">
+            <img src="@/assets/pokedex.png" alt="Pokedex" class="pokedex-image">
+            <label class="white--text text-center">SIMPLIFIED POKEDEX</label>
+        </v-col>
+        <v-col cols="12">
+            <v-list class="background-poke">
+                <v-list-item class="ml-7" v-for="selectGeneration in generation" :key="selectGeneration.id" @click="get_all(selectGeneration)" :flat="flat">
+                    <v-list-item-action>
+                        <v-icon :color="selectGeneration.isActive ? 'yellow' : 'white'">mdi-pokeball</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title :class="{ 'yellow--text': selectGeneration.isActive, 'white--text' : !selectGeneration.isActive, }" @click="toggleGeneration(selectGeneration)">{{ selectGeneration.name }}</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+            </v-list>
+        </v-col>
+    </v-row>
+</v-container>
 </template>
 
 <script>
@@ -111,6 +111,14 @@ export default {
         toggleMenu() {
             this.isMenuOpen = !this.isMenuOpen;
         },
+        toggleGeneration(selectedGeneration) {
+            for (const generationKey in this.generation) {
+                if (Object.prototype.hasOwnProperty.call(this.generation, generationKey)) {
+                    this.generation[generationKey].isActive = false;
+                }
+            }
+            selectedGeneration.isActive = true;
+        },
 
     },
 }
@@ -134,5 +142,4 @@ export default {
     margin-left: 20%;
     display: block;
 }
-
 </style>

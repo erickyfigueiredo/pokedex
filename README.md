@@ -2,7 +2,7 @@
 
 Simplified Pokedex is a web application that allows users to explore information about Pokémon from various generations. You can view details about each Pokémon, including their statistics, abilities, and types.
 
-![Pokedex Screenshot](./screenshot.png)
+![Pokedex Screenshot](./screenshot.gif)
 
 ## Features
 

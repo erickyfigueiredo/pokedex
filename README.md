@@ -8,6 +8,7 @@ Simplified Pokedex is a web application that allows users to explore information
 
 - View a list of Pokémon from various generations.
 - Click on a Pokémon to get detailed information.
+- Click on a Pokémon to turn back image.
 - Filter Pokémon by generation.
 - Search for Pokémon by name.
 
@@ -40,6 +41,7 @@ Simplified Pokedex is a web application that allows users to explore information
 - Open the application in your browser.
 - Explore the list of Pokémon.
 - Click on a Pokémon to view more information.
+- Click on a Pokémon to turn back image.
 - Use the search bar to find Pokémon by name.
 - Filter Pokémon by generation using the sidebar menu.
 
